@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { InicioComponent } from 'src/app/components/inicio/inicio.component';
 import { CrearCiudadComponent } from 'src/app/components/crear-ciudad/crear-ciudad.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { AuthGuard } from './guards/auth.guard';
+
 
 
 const routes: Routes = [
@@ -18,10 +20,12 @@ const routes: Routes = [
   {
     path: 'crear-ciudad',
     component: CrearCiudadComponent,
+    canActivate:[AuthGuard],
   },
   {
     path: 'dashboard',
     component: DashboardComponent,
+    canActivate:[AuthGuard],
   },
   {
     path: '**',
