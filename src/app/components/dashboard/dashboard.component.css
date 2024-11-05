@@ -1,0 +1,38 @@
+.dashboard-content {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.welcome-text {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.user-info .card {
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.user-info img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    margin-bottom: 15px;
+}
+
+.user-name {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.user-email {
+    color: #555;
+    font-size: 0.9rem;
+}

@@ -1,5 +1,12 @@
-<div class="dashboard-content">
-    <h1>Bienvenido al Panel de Control</h1>
-    <p>Aquí puedes ver un resumen de la actividad reciente.</p>
-    <!-- Agregar gráficos, estadísticas, o accesos directos -->
+<div class="dashboard-content text-center">
+    <h1 *ngIf="user">Bienvenido a Ucobet, {{ user.given_name }}!</h1>
+    <p class="welcome-text" *ngIf="user">Apuestale a tu pasion.</p>
+    
+    <section *ngIf="user" class="user-info">
+        <div class="card mx-auto" style="max-width: 300px; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 20px;">
+            <img [src]="user.picture" alt="Foto de perfil" class="rounded-circle mx-auto d-block" style="width: 80px; height: 80px; object-fit: cover; border: 2px solid #ddd; margin-bottom: 15px;">
+            <h2 class="user-name" style="margin: 10px 0; font-size: 1.5rem;">{{ user.given_name }} {{ user.family_name }}</h2>
+            <p class="user-email" style="color: #555;">{{ user.email }}</p>
+        </div>
+    </section>
 </div>

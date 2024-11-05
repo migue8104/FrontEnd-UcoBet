@@ -1,23 +1,25 @@
-<div class="container">
-  <header *ngIf="isAuthenticated" class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-      <div class="col-md-3 mb-2 mb-md-0">
-          <a routerLink="/" class="d-inline-flex link-body-emphasis text-decoration-none">
-              <svg class="bi" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
-          </a>
-      </div>
-      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-          <li><a routerLink="/" class="nav-link px-2 link-secondary">Inicio</a></li>
-          <li><a routerLink="/crear-ciudad" class="nav-link px-2">Crear Ciudad</a></li>
-          <li><a routerLink="/consultar-ciudad" class="nav-link px-2">Consultar Ciudad</a></li>
-          <li><a routerLink="/consultar-estados" class="nav-link px-2">Consultar Estados</a></li>
-          <li><a routerLink="/nosotros" class="nav-link px-2">Nosotros</a></li>
-      </ul>
-      <div class="col-md-3 text-end">
-          <button type="button" (click)="logOut()" class="btn btn-outline-primary me-2">LogOut</button>
-      </div>
-  </header>
-  <main>
-      <!-- Aquí se renderizan las rutas hijas -->
-      <router-outlet></router-outlet>
-  </main>
+<div class="container-fluid"> <!-- Cambié de container a container-fluid para abarcar todo el ancho -->
+    <header *ngIf="isAuthenticated" class="d-flex flex-wrap align-items-center justify-content-between py-3 mb-4 border-bottom bg-success">
+        <div class="col-md-3 d-flex align-items-center">
+            <!-- Aquí se agrega la imagen -->
+            <a routerLink="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+                <img src="https://www.elempleo.com/co/sitio-empresarial/CompanySites/universidad-catolica-oriente/resources/images/logo-social.png" 
+                     alt="Logo" 
+                     style="max-height: 80px; width: 120px; margin-right: 0px;">
+            </a>
+        </div>
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a routerLink="/" class="nav-link px-2 text-white">Inicio</a></li>
+            <li><a routerLink="/crear-ciudad" class="nav-link px-2 text-white">Registrar Ciudad</a></li>
+            <li><a routerLink="/consultar-ciudad" class="nav-link px-2 text-white">Consultar Ciudad</a></li>
+            <li><a routerLink="/consultar-estados" class="nav-link px-2 text-white">Consultar Estados</a></li>
+        </ul>
+        <div class="col-md-3 text-end">
+            <button type="button" (click)="logOut()" class="btn btn-danger">LogOut</button>
+        </div>
+    </header>
+    <main>
+        <!-- Aquí se renderizan las rutas hijas -->
+        <router-outlet></router-outlet>
+    </main>
 </div>
